@@ -1,0 +1,366 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.topo{
+    background-color: #e30513;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+.topo img{
+    height: 60px;
+    margin-left: 200px;
+}
+.subtitulo{
+    margin-left: 200px;
+}
+.subtitulo p{
+    color: #ffed00;
+    font-size: 15px;
+    margin: 0;
+}
+.btn-primeiro{
+    margin-left: 180px;
+    background-color: #fff;
+    border: none;
+    color: #e30513;
+    padding: 1px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 1s ease-out, transform 1s ease-out;
+}
+.btn-primeiro:hover{
+    background-color: #ffed00;
+}
+.banner{
+    width: 100%;
+}
+.comeco{
+    text-align: center;
+    margin-top: 50px;
+    
+}
+.gold{
+    font-weight: 900;
+    font-family: 32px 'Gotham', sans-serif;
+    color: #e30513;
+}
+.paragrafo-um{
+    font-family: 17px 'roboto, sans-serif';
+    color: #5e6060;
+    margin-top: 22px;
+}
+.farmacia{
+    margin-left: 760px;
+    max-width: 50%;
+}
+:root{
+  --red: #d93232;
+  --red-dark: #c22727;
+  --bg: #fff;
+  --muted: #9b9b9b;
+  --shadow: 0 6px 16px rgba(0,0,0,0.08);
+  --radius: 8px;
+  --height: 56px;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, system-ui;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: #f7f7f7;
+  margin: 24px;
+  color: #222;
+}
+
+/* Container da página: centraliza e limita largura */
+.page {
+  max-width: 420px;
+  margin: 24px auto;
+  padding: 0 12px;
+}
+
+/* Form layout */
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* Custom select container: ocupa toda a largura do form */
+.custom-select {
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  border: 2px solid var(--red);
+  border-radius: var(--radius);
+  height: var(--height);
+  padding: 0 8px 0 14px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 5px;
+}
+
+/* quando um controle interno tem foco */
+.custom-select:focus-within {
+  box-shadow: 0 8px 22px rgba(217,50,50,0.14);
+  border-color: var(--red-dark);
+}
+
+/* select nativo: ocupa espaço restante e remove a aparência nativa */
+.custom-select select {
+  /* garante que o select preencha o container */
+  flex: 1 1 auto !important;
+  width: 100% !important;
+  height: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 15px;
+  color: #444;
+  padding: 0 12px 0 0; /* padding-right será ajustado abaixo */
+  line-height: var(--height);
+  cursor: pointer;
+
+  /* remove seta nativa em navegadores modernos */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* espaço extra para o chevron/custom right area */
+  padding-right: 72px;
+}
+
+/* mobile / alguns browsers específicos */
+.custom-select select::-ms-expand { display: none; } /* IE/Edge */
+
+/* placeholder option color (nem todos os browsers respeitam) */
+.custom-select select option[value=""] {
+  color: var(--muted);
+}
+
+/* Right side (divider + chevron) */
+.select-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 100%;
+  justify-content: center;
+  min-width: 56px;
+  pointer-events: none; /* permite clicar no select por baixo sem bloquear */
+}
+
+/* vertical divider line */
+.select-right .divider {
+  width: 1px;
+  height: 56%;
+  background: var(--red);
+  display: inline-block;
+}
+
+/* chevron */
+.select-right .chev {
+  color: var(--red);
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* disabled state */
+.custom-select select:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* Button */
+.btn-search {
+  align-self: center;
+  background: var(--red);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  box-shadow: var(--shadow);
+  transition: transform .08s ease, box-shadow .12s ease, background .12s ease;
+}
+
+.btn-search .btn-arrow {
+  font-size: 16px;
+  transform: translateX(2px);
+}
+
+.btn-search:hover {
+  transform: translateY(-1px);
+  background: var(--red-dark);
+}
+
+/* Responsividade */
+@media (max-width:420px){
+  .page { padding: 12px; }
+  .btn-search { width: 100%; justify-content: center; }
+}
+.instagram{
+    font-family: 'Gotham', sans-serif;
+    font-weight: 900;
+    color: #e30513;
+    text-align: center;
+}
+.mensagem{
+    font-family: 'Roboto', sans-serif !important;
+    color: #5e6060;
+    text-align: center;
+    margin-top: 20px;
+}
+.imagem-black{
+    max-width: 100%;
+    height: auto;
+    
+}
+.cards-ultra {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.card-ultra {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+    transition: transform .25s ease, box-shadow .3s ease;
+    cursor: pointer;
+}
+
+.card-ultra:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.25);
+}
+
+.card-ultra img {
+    width: 100%;
+    display: block;
+}
+.promocao{
+    max-width: 100%;
+}
+.blog {
+    /* Define o container para usar flexbox para alinhar o logo e o texto lateral */
+    display: flex;
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+    gap: 20px; /* Espaço entre o logo (Blog Ultra Popular) e o texto */
+    text-align: center;
+}
+
+/* Estiliza o H2 "Blog" */
+.blog-h2 {
+    color: #e64a19; /* Laranja/Vermelho forte */
+    font-size: 80px; /* Tamanho grande */
+    font-weight: 900; /* Negrito máximo */
+    line-height: 0.8; /* Diminui a altura da linha para aproximar do "Ultra Popular" */
+    margin: 0; /* Remove margens padrão */
+}
+
+/* Container específico para "Ultra Popular" para alinhá-los verticalmente */
+.blog-super-popular {
+    /* Agrupa "Ultra" e "Popular" para que fiquem juntos abaixo do "Blog" */
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px; /* Ajusta para subir um pouco, ficando mais próximo do "Blog" */
+}
+
+/* Estiliza o "Ultra" */
+.blog-super {
+    color: #ffb300; /* Amarelo/Laranja */
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1; /* Altura da linha normal */
+    margin: 0;
+}
+
+/* Estiliza o "Popular" */
+.blog-popular {
+    color: #ffb300; /* Amarelo/Laranja (mesma cor do Ultra) */
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+}
+
+/* Estiliza o texto lateral */
+.mensagem2 {
+    color: #616161; /* Cor cinza para o texto */
+    font-size: 12px;
+    max-width: 400px; /* Limita a largura do texto para evitar que fique muito longo */
+    margin: 0;
+}
+.capa{
+    max-width: 100%;
+    height: auto;
+    margin-top: 34px;
+}
+/* 1. Estilo para o Container Principal */
+.blog-imgs {
+    /* Usa Flexbox para colocar os itens lado a lado */
+    display: flex; 
+    /* Garante um espaço consistente entre os cards */
+    gap: 20px; 
+    /* Centraliza o container se ele for menor que a tela, opcional */
+    justify-content: center; 
+    /* Limita a largura total do container na tela */
+    max-width: 1200px; 
+    margin: 20px auto; /* Adiciona margem acima/abaixo e centraliza horizontalmente */
+}
+
+/* 2. Estilo para os Containers Individuais (Cards) */
+.imagen1,
+.imagen2,
+.imagen3 {
+    /* Define que cada card ocupe 1/3 do espaço disponível */
+    flex: 1; 
+    /* Remove a largura fixa para que 'flex: 1' funcione */
+    width: auto; 
+    /* Opcional: Adiciona uma borda arredondada e sombra para parecer um "card" */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Garante que a imagem não vaze do card */
+}
+
+/* 3. Estilo para a Tag de Imagem (o mais importante para o tamanho) */
+.imagen1 img,
+.imagen2 img,
+.imagen3 img {
+    /* Faz a imagem ocupar 100% da largura do seu card pai */
+    width: 100%; 
+    /* Define uma altura fixa para que todas as imagens fiquem do mesmo tamanho verticalmente */
+    height: 250px; 
+    /* Garante que a imagem cubra o espaço definido sem distorcer (cortando o excesso, se necessário) */
+    object-fit: cover; 
+    /* Remove o espaço em branco padrão que alguns navegadores adicionam */
+    display: block; 
+}
